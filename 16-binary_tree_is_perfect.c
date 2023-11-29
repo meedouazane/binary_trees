@@ -42,10 +42,13 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+	size_t left, right;
+
 	if (tree == NULL)
 		return (0);
-	if (binary_tree_nodes(tree->left) % 2 != 0 &&
-			binary_tree_nodes(tree->right) % 2 != 0)
+	left = binary_tree_nodes(tree->left);
+	right = binary_tree_nodes(tree->right);
+	if (left == right)
 		return (binary_tree_is_full(tree->left) * binary_tree_is_full(tree->right));
 	return (0);
 }
