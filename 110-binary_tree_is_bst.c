@@ -1,4 +1,3 @@
-#include <limits.h>
 #include "binary_trees.h"
 /**
  * max_left_value - find the max value in tree.
